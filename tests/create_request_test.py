@@ -1,16 +1,9 @@
 import pytest
-
+from .t_data import dates
+from .. import build_request
 
 class TestBuildRequest:
     """test different ways to manipulate request string"""
-
-    def test_valid_dates(self):
-        """provided valid dates"""
-        pass
-
-    def test_invalid_dates(self):
-        """provided invalid dates"""
-        pass
 
     def test_valid_langs(self):
         """providing valid langs"""
@@ -24,7 +17,10 @@ class TestBuildRequest:
         """providing valid locations"""
         pass
 
-    # Other tests to come
+    def test_dates(self):
+        for day, expected in dates:
+            assert (result := build_request.build_query(date=day)) == expected,\
+                'expected %s | received %s' % (expected, result)
 
 
 class TestEnglishParse:
