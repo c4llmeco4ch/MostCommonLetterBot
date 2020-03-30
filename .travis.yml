@@ -4,9 +4,7 @@ python:
   - "3.8.0"
 
 install:
-  pip install requests
-  pip install tweepy
-  pip install pytest
+  pip install requests tweepy pytest
 
 script:
   - pytest
