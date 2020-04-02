@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/c4llmeco4ch/MostCommonLetterBot.svg?branch=master)](https://travis-ci.com/c4llmeco4ch/MostCommonLetterBot)
 
-[![Coverage Status](https://coveralls.io/repos/github/c4llmeco4ch/MostCommonLetterBot/badge.svg?branch=master)](https://coveralls.io/github/c4llmeco4ch/MostCommonLetterBot?branch=master)
+[![codecov](https://codecov.io/gh/c4llmeco4ch/MostCommonLetterBot/branch/master/graph/badge.svg)](https://codecov.io/gh/c4llmeco4ch/MostCommonLetterBot)
 
 Daily Tweets on the most commonly used letter in all tweets
 
