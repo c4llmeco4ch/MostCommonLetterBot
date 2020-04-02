@@ -4,7 +4,7 @@ python:
   - "3.8.0"
 
 install:
-  pip install requests tweepy pytest codecov
+  pip install requests tweepy pytest codecov pytest-cov
 
 script:
   - pytest --cov=.
