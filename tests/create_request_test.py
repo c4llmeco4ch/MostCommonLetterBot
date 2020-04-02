@@ -19,7 +19,7 @@ class TestBuildRequest:
 
     def test_dates(self):
         for day, expected in dates:
-            assert (result := build_request.build_query(date=day)) == expected,\
+            assert (result := build_request.build_API_query(date=day)) == expected,\
                 'expected %s | received %s' % (expected, result)
 
 
