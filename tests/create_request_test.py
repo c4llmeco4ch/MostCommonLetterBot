@@ -12,10 +12,6 @@ class TestBuildRequest:
             result = build_request.convert_lang_to_query(langstr=lang)
             assert result == goal, 'wanted %s | got %s' % (goal, result)
 
-    def test_invalid_langs(self):
-        """providing invalid langs"""
-        pass
-
     def test_valid_locations(self):
         """providing valid locations"""
         pass
