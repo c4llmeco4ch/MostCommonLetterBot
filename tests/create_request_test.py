@@ -1,6 +1,7 @@
 import pytest
-from .t_data import dates
+from .t_data import dates, langs
 from .. import build_request
+
 
 class TestBuildRequest:
     """test different ways to manipulate request string"""
@@ -19,8 +20,8 @@ class TestBuildRequest:
 
     def test_dates(self):
         for day, expected in dates:
-            assert (result := build_request.build_API_query(date=day)) == expected,\
-                'expected %s | received %s' % (expected, result)
+            result = build_request.convert_datestr_to_query(date=day)
+            assert result == expected, 'expected %s | received %s' % (expected, result)
 
 
 class TestEnglishParse:
@@ -45,5 +46,3 @@ class TestEnglishParse:
     def test_non_english_chars(self):
         """when language is set to english, non-en characters aren't read"""
         pass
-
-
