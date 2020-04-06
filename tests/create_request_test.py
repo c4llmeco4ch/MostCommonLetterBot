@@ -19,9 +19,9 @@ class TestBuildRequest:
         pass
 
     def test_dates(self):
-        for day, expected in dates:
-            result = build_request.convert_datestr_to_query(date=day)
-            assert result == expected, 'expected %s | received %s' % (expected, result)
+        for day, goal in dates:
+            result = build_request.convert_datestr_to_query(datestr=day)
+            assert result == gaol, 'wanted %s | got %s' % (goal, result)
 
 
 class TestEnglishParse:
