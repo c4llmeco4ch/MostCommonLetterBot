@@ -6,9 +6,11 @@ from .. import build_request
 class TestBuildRequest:
     """test different ways to manipulate request string"""
 
-    def test_valid_langs(self):
-        """providing valid langs"""
-        pass
+    def test_langs(self):
+        """confirming the langs in t_data.langs are correct"""
+        for lang, goal in langs:
+            result = build_request.convert_lang_to_query(langstr=lang)
+            assert result == goal, 'wanted %s | got %s' % (goal, result)
 
     def test_invalid_langs(self):
         """providing invalid langs"""
@@ -19,6 +21,7 @@ class TestBuildRequest:
         pass
 
     def test_dates(self):
+        """confirm dates provided in t_data.dates are correct"""
         for day, goal in dates:
             result = build_request.convert_datestr_to_query(datestr=day)
             assert result == goal, 'wanted %s | got %s' % (goal, result)
