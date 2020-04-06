@@ -21,7 +21,7 @@ class TestBuildRequest:
     def test_dates(self):
         for day, goal in dates:
             result = build_request.convert_datestr_to_query(datestr=day)
-            assert result == gaol, 'wanted %s | got %s' % (goal, result)
+            assert result == goal, 'wanted %s | got %s' % (goal, result)
 
 
 class TestEnglishParse:
