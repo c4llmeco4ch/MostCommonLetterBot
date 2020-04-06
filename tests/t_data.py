@@ -9,3 +9,8 @@ dates = [('1:1:2020', r'q=since%3A2020%2D1%2D1'),
                 day=t.day),
          )
        ]
+
+langs = [('en', r'lang%3Aen'),
+         ('es', r'lang%3Aes'),
+         ('ru', r'lang%3Aru')
+        ]
